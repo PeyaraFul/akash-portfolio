@@ -10,7 +10,10 @@ import Link from "next/link";
 const HeroSection = () => {
   return (
     <div>
-      <div className="hero rounded-sm bg-linear-to-t/hsl from-[#050a30] to-[#0a8c95]">
+      <div
+        id="hero-section"
+        className="hero rounded-sm bg-linear-to-t/hsl from-[#050a30] to-[#0a8c95]"
+      >
         <div className="hero-content flex-col lg:flex-row-reverse">
           <Image
             className="rounded-2xl shadow-2xl -mb-4"

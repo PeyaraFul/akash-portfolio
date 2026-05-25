@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Akash from "../../../public/akash-reward.png";
 import EnjoyTopics from "./EnjoyTopics";
 import { BtnStyle } from "@/lib/Btn";
+import SoftSkills from "./Personality";
 
 const CoddingJourney = () => {
   const [isOpen, setIsOpen] = useState("hidden");
@@ -11,7 +12,7 @@ const CoddingJourney = () => {
     setIsOpen((prev) => (prev === "hidden" ? "" : "hidden"));
   };
   return (
-    <section className="max-w-7xl mx-auto px-4 py-20">
+    <section id="about-me-section" className="max-w-7xl mx-auto px-4 py-20">
       {/* Heading */}
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold text-green-400  ">
@@ -70,6 +71,7 @@ const CoddingJourney = () => {
           </div>
         </div>
         <EnjoyTopics isOpen={isOpen} />
+        <SoftSkills isOpen={isOpen} />
       </div>
     </section>
   );

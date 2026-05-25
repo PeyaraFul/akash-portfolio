@@ -2,10 +2,19 @@ import React from "react";
 import driveNestImage from "../../../public/drive-nest4.png";
 import Image from "next/image";
 import { BtnStyle } from "@/lib/Btn";
+import Link from "next/link";
 
 const DriveNest = () => {
   return (
     <div>
+      <div className="text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-bold text-green-400">
+          My Projects
+        </h1>
+        <p className="text-gray-500 mt-3">
+          Projects I have worked on. Every project is a learning experience.
+        </p>
+      </div>
       <section className=" mx-auto px-4 py-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 overflow-hidden rounded-3xl border border-white/10 bg-slate-900 shadow-2xl">
           {/* Left Side - Project Screenshot */}
@@ -75,17 +84,21 @@ const DriveNest = () => {
 
             {/* Buttons */}
             <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="https://drive-nest-omega.vercel.app"
+              <Link
                 target="_blank"
+                href="https://drive-nest-omega.vercel.app"
                 className={BtnStyle.primaryBtn}
               >
                 Live Demo
-              </a>
+              </Link>
 
-              <a href="#" className={BtnStyle.secondaryBtn}>
+              <Link
+                target="_blank"
+                href="https://github.com/PeyaraFul/drive-nest"
+                className={BtnStyle.secondaryBtn}
+              >
                 GitHub
-              </a>
+              </Link>
             </div>
           </div>
         </div>

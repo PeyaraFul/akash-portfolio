@@ -50,7 +50,10 @@ const SkillCard = ({ tech }) => {
 
 const SkillsSection = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-20 bg-white">
+    <section
+      id="skills-section"
+      className="max-w-7xl mx-auto px-4 py-10 bg-white"
+    >
       {/* Heading */}
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold text-green-400">
