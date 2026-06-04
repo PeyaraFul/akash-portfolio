@@ -1,10 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { CiFacebook, CiLinkedin, CiMail } from "react-icons/ci";
 import { FaWhatsapp } from "react-icons/fa";
 import { BtnStyle } from "@/lib/Btn";
+import toast from "react-hot-toast";
 
 const contacts = [
   {
@@ -34,8 +36,55 @@ const contacts = [
 ];
 
 const MailForm = () => {
+  const [loading, setLoading] = useState(false);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
   const inputBoxClass =
-    "w-full rounded-2xl border shadow-[inset_0_1px_8px_rgba(0,169,237,0.3)]  border-white/10 bg-white/5 px-5 py-4 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 resize-none";
+    "w-full rounded-2xl border shadow-[inset_0_1px_8px_rgba(0,169,237,0.3)] border-white/10 bg-white/5 px-5 py-4 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 resize-none";
+
+  const handleChange = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_NAME,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_NAME,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+      );
+      toast.success("Message sent successfully!");
+      // alert("Message sent successfully!");
+
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <section
@@ -57,10 +106,10 @@ const MailForm = () => {
       {/* Main Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start text-black">
         {/* Contact Form */}
-        <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 md:p-8 shadow-2xl text-black">
+        <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 md:p-8 shadow-2xl">
           <h2 className="text-2xl font-semibold mb-6">Send Me a Message</h2>
 
-          <form className="space-y-5 text-black">
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div>
               <label className="text-sm text-slate-800 mb-2 block">
                 Your Name
@@ -68,6 +117,10 @@ const MailForm = () => {
 
               <input
                 type="text"
+                name="name"
+                required
+                value={formData.name}
+                onChange={handleChange}
                 placeholder="Enter your name"
                 className={inputBoxClass}
               />
@@ -80,6 +133,10 @@ const MailForm = () => {
 
               <input
                 type="email"
+                name="email"
+                required
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="example@gmail.com"
                 className={inputBoxClass}
               />
@@ -92,13 +149,21 @@ const MailForm = () => {
 
               <textarea
                 rows={6}
+                name="message"
+                required
+                value={formData.message}
+                onChange={handleChange}
                 placeholder="Tell me about your project..."
                 className={inputBoxClass}
-              ></textarea>
+              />
             </div>
 
-            <button type="submit" className={`${BtnStyle.primaryBtn} w-full`}>
-              Send Message
+            <button
+              type="submit"
+              disabled={loading}
+              className={`${BtnStyle.primaryBtn} w-full`}
+            >
+              {loading ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>
@@ -117,10 +182,9 @@ const MailForm = () => {
                 key={index}
                 className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 transition-all duration-300 hover:-translate-y-2 hover:border-white/20 hover:bg-white/10 hover:shadow-2xl"
               >
-                {/* Gradient Glow */}
                 <div
                   className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition duration-500 bg-gradient-to-br ${contact.color}`}
-                ></div>
+                />
 
                 <div className="relative z-10 flex flex-col items-center text-center">
                   <div
