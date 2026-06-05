@@ -1,36 +1,163 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌟 Akash Mia Portfolio
 
-## Getting Started
+A modern, responsive, and interactive developer portfolio built with Next.js and React. This portfolio showcases my projects, technical skills, professional journey, and contact information while highlighting my passion for creating scalable and user-friendly web applications.
 
-First, run the development server:
+<!-- Add Screenshot Here -->
+
+<!-- ![Portfolio Screenshot](./screenshot.png) -->
+
+## 🚀 Live Demo
+
+* Live Website: https://akash-portfolio-three-ashy.vercel.app
+
+
+---
+
+## 📖 Overview
+<img width="1882" height="940" alt="image" src="https://github.com/user-attachments/assets/11015852-a753-4137-8319-8b31ef6745a6" />
+
+
+This portfolio serves as my personal digital presence where recruiters, clients, and fellow developers can learn about my background, explore my projects, and connect with me. The website focuses on performance, responsiveness, accessibility, and modern UI/UX design.
+
+---
+
+## ✨ Features
+
+* Modern and responsive design
+* Interactive Hero Section
+* About Me section
+* Skills showcase
+* Featured projects portfolio
+* Contact form integration
+* Resume download functionality
+* Social media links
+* Mobile-friendly layout
+* Smooth user experience
+* Professional UI with modern design patterns
+
+---
+
+## 🛠️ Technologies Used
+
+### Frontend
+
+* Next.js
+* React
+* JavaScript (ES6+)
+* Tailwind CSS
+
+### UI Libraries
+
+* HeroUI
+* React Icons
+
+### Form Handling
+
+* React Hook Form
+
+### Notifications
+
+* React Hot Toast
+
+### Deployment
+
+* Vercel
+
+---
+
+## 📦 Main Dependencies
+
+```bash
+next
+react
+react-dom
+
+@heroui/react
+@heroui/styles
+
+react-hook-form
+react-hot-toast
+react-icons
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/PeyaraFul/your-portfolio-repo.git
+```
+
+### Navigate to Project Directory
+
+```bash
+cd your-portfolio-repo
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+portfolio/
+│
+├── app/
+├── components/
+├── public/
+├── lib/
+├── hooks/
+├── assets/
+├── package.json
+└── README.md
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎯 Goals of This Portfolio
 
-## Deploy on Vercel
+* Showcase my technical skills
+* Highlight my projects and achievements
+* Build a professional online presence
+* Connect with recruiters and clients
+* Demonstrate modern frontend development practices
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 👨‍💻 About Me
+
+I am **Akash Mia**, a passionate MERN Stack Developer focused on building modern, scalable, and user-friendly web applications. I enjoy solving real-world problems through clean code and engaging user experiences.
+
+---
+
+## 📬 Contact
+
+* Email: [arakash022@gmail.com](mailto:arakash022@gmail.com)
+* LinkedIn: https://www.linkedin.com/in/md-akash-mia-bd
+* GitHub: https://github.com/PeyaraFul
+* Facebook: https://www.facebook.com/arakash022
+
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
