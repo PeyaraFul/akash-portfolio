@@ -158,6 +158,4 @@ I am **Akash Mia**, a passionate MERN Stack Developer focused on building modern
 
 ---
 
-## 📄 License
 
-This project is open-source and available under the MIT License.
