@@ -18,6 +18,9 @@ const Navbar = () => {
                 <a href="#hero-section">Home</a>
               </li>
               <li>
+                <a href="#projects-section">Projects</a>  
+              </li>
+              <li>
                 <a href="#about-me-section">About</a>
               </li>
               <li>
@@ -38,6 +41,9 @@ const Navbar = () => {
             <li>
               <a href="#hero-section">Home</a>
             </li>
+            <li>
+                <a href="#projects-section">Projects</a>  
+              </li>
             <li>
               <a href="#about-me-section">About</a>
             </li>

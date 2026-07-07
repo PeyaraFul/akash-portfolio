@@ -1,21 +1,27 @@
 import React from "react";
-import driveNestImage from "../../../public/drive-nest4.png";
+import peyarafulNestImage from "../../../public/peyarafulNest.png";
 import Image from "next/image";
 import { BtnStyle } from "@/lib/Btn";
 import Link from "next/link";
 
-const DriveNest = () => {
+const PeyarafulNest = () => {
   return (
-    <div>
-      <div className="text-center">
-        
+    <div id="projects-section">
+     
+      <div className="text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-bold text-green-400  ">
+          Projects
+        </h1>
+        <p className="text-gray-500 mt-3">
+         Projects I have worked on. Every project is a learning experience.
+        </p>
       </div>
       <section className=" mx-auto px-4 py-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 overflow-hidden rounded-3xl border border-white/10 bg-slate-900 shadow-2xl">
           {/* Left Side - Project Screenshot */}
           <div className="relative group">
             <Image
-              src={driveNestImage}
+              src={peyarafulNestImage}
               width={600}
               height={600}
               alt="Drive Nest Project Screenshot"
@@ -23,26 +29,30 @@ const DriveNest = () => {
             />
 
             {/* Badge */}
-            <div className="absolute top-5 left-5 rounded-full bg-white/10 backdrop-blur-md px-4 py-2 text-sm font-medium text-white border border-white/20">
-              MERN-Stack Project
+            <div className="absolute top-5 left-5 rounded-full bg-white/10 backdrop-blur-md px-4 py-2 text-sm font-medium text-gray-600 border border-gray/20">
+              Full-Stack Project
             </div>
           </div>
 
           {/* Right Side - Content */}
           <div className="flex flex-col justify-center p-4 md:p-8 text-white">
             <span className="mb-3 inline-block rounded-full bg-blue-500/10 px-4 py-1 text-sm font-medium text-blue-400 border border-blue-500/20">
-              Car Rental Platform
+              Property Rental Platform
             </span>
 
             <h2 className="text-3xl md:text-3xl font-bold leading-tight">
-              Drive Nest
+              Peyaraful Nest
             </h2>
 
             <p className="mt-2 text-slate-300 ">
-              Drive Nest is a modern full-stack car rental platform where users
-              can browse vehicles, view detailed car information, and book cars
-              easily. The platform includes secure authentication, booking
-              management, and a responsive user-friendly interface.
+              Peyaraful Nest is a modern property rental platform where property
+              owners can list rental properties and tenants can browse, book,
+              and manage rental requests and received payments. The platform
+              features secure user authentication, role-based access control, property management, booking workflow, and stripe payment integration. Built with
+              MongoDB, Express.js, React.js, and Node.js, fully responsive UI
+              for mobile, tablet, and desktop, JWT authentication, role-based
+              dashboards, property approval workflow, booking management, Stripe
+              payment integration, and RESTful APIs.
             </p>
 
             {/* Features */}
@@ -50,14 +60,14 @@ const DriveNest = () => {
               <div className="rounded-2xl border border-white/10 bg-white/5 p-3">
                 <h4 className="font-semibold text-md">Authentication</h4>
                 <p className="text-sm text-slate-400 mt-1">
-                  JWT & express based secure login system.
+                 Role-based authentication with JWT & express based secure login system.
                 </p>
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-white/5 p-3">
-                <h4 className="font-semibold text-md">Booking System</h4>
+                <h4 className="font-semibold text-md">Features</h4>
                 <p className="text-sm text-slate-400 mt-1">
-                  Users can book cars and manage reservations.
+                  Booking system, posting rating and review, property management, and stripe payment, different dashboards for tenant and property owners.
                 </p>
               </div>
 
@@ -69,10 +79,9 @@ const DriveNest = () => {
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-white/5 p-3">
-                <h4 className="font-semibold text-md">Modern Stack</h4>
+                <h4 className="font-semibold text-md">Tools and Tech</h4>
                 <p className="text-sm text-slate-400 mt-1">
-                  Built using React, Next.js, Express.js, MongoDB, and Tailwind
-                  CSS.
+                  MongoDB, Express.js, React.js, and Node.js, tailwind CSS.
                 </p>
               </div>
             </div>
@@ -81,7 +90,7 @@ const DriveNest = () => {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 target="_blank"
-                href="https://drive-nest-omega.vercel.app"
+                href="https://peyaraful-nest-client.vercel.app"
                 className={BtnStyle.primaryBtn}
               >
                 Live Demo
@@ -89,7 +98,7 @@ const DriveNest = () => {
 
               <Link
                 target="_blank"
-                href="https://github.com/PeyaraFul/drive-nest"
+                href="https://github.com/PeyaraFul/peyaraful-nest-client"
                 className={BtnStyle.secondaryBtn}
               >
                 GitHub
@@ -102,4 +111,4 @@ const DriveNest = () => {
   );
 };
 
-export default DriveNest;
+export default PeyarafulNest;
